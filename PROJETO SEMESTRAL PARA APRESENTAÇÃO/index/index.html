@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JGZGJ</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.js">
+</head>
+
+<body class="fundo-claro">
+
+    <header class="h-claro">
+        <div id="cabeca">
+            <div id="logo">
+                <img src="/IMAGENS/logo light.png" alt="" class="logo">
+                <h1 class="nm logo-claro">JGZGJ</h1>
+            </div>
+            <h1 class="nomeLoja logo-claro">Crie sua Própria História de Elegância</h1>
+        </div>
+        <!-- header -->
+
+
+        <div id="head-botoes">
+            <nav class="nav nav-claro">
+                <a href="/index/index.html" class="nav-item is-active nav-item-claro" active-color="#AA77FF">Home</a>
+                <a href="/historia/historia.html" class="nav-item nav-item-claro" active-color="#AA77FF">História</a>
+                <a href="#oculos" class="nav-item nav-item-claro" active-color="#AA77FF">Coleções</a>
+                <a href="/pagamentos/pag.html" class="nav-item nav-item-claro" active-color="#AA77FF">Pagamento</a>
+                <a href="/form/form.html" class="nav-item nav-item-claro" active-color="#AA77FF">Perfil</a>
+                <span class="nav-indicator"></span>
+            </nav>
+            <label class="switch">
+                <input type="checkbox" id="trocaCor">
+                <span class="slider"></span>
+            </label>
+            <div id="carrinho-icon" onclick="toggleCarrinho()">
+                <div class="imagem">
+                    <img src="/IMAGENS/carrinho.png" alt="" id="produtos">
+                </div>
+                <span id="cont-carrinho" class="texto texto-claro">0</span>
+            </div>
+
+
+            <div id="carrinho-itens" style="display: none;">
+                <ul id="itens-lista" class="texto"></ul>
+                <span id="preco-total" class="texto">Valor Total: R$0,00</span>
+                <div class="pp">
+                <button class="limpa" onclick="limparCarrinho()">Limpar Carrinho</button>
+                <button class="pagar" onclick="realizarPagamento()">Pagar</button>
+            </div>
+            </div>
+        </div>
+    </header>
+    <!-- fim header -->
+    <!-- coleções -->
+    <div class="colecoes">
+        <div class="brinco brinco-claro">
+            <img src="/IMAGENS/brinco1.webp" alt="" class="img-claro">
+            <p class="titulo-brinco texto-claro">Brinco Estrela</p>
+            <div class="compra">
+                <h2 class="texto-claro">R$ 50,00</h2>
+                <button onclick="addCarrinho('Brinco Estrela', 50)" class="carrinho">
+                    <img src="/IMAGENS/carrinho.png" alt="">
+                </button>
+
+            </div>
+        </div>
+        <div id="oculos" class="brinco brinco-claro">
+            <img src="/IMAGENS/brinco2.webp" alt="" class="img-claro">
+            <p class="titulo-brinco texto-claro">Brinco Gota de agua</p>
+            <div class="compra">
+                <h2 class="texto-claro">R$ 50,00</h2>
+                <button onclick="addCarrinho('Brinco Gota de agua', 50)" class="carrinho">
+                    <img src="/IMAGENS/carrinho.png" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="brinco brinco-claro">
+            <img id="55" src="/IMAGENS/brinco3.webp" alt="" class="img-claro">
+            <p class="titulo-brinco texto-claro">Brinco Coração</p>
+            <div class="compra">
+                <h2 class="texto-claro">R$ 50,00</h2>
+                <button onclick="addCarrinho('Brinco Coração', 50)" class="carrinho">
+                    <img src="/IMAGENS/carrinho.png" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- imagens -->
+    <div class="imgg">
+        <div class="identidade">
+            <img class="identidade" src="/IMAGENS/identidade escura.png" alt="">
+        </div>
+        <div class="processo">
+            <img class="processo" src="/IMAGENS/escuro processo.png" alt="">
+        </div>
+    </div>
+    <div class="colecoes">
+        <div class="brinco brinco-claro">
+            <img src="/IMAGENS/brinco4.webp" alt="" class="img-claro">
+            <p class="titulo-brinco texto-claro">Colar Masculino</p>
+            <div class="compra">
+                <h2 class="texto-claro">R$ 50,00</h2>
+                <button onclick="addCarrinho('Colar Masculino', 50)" class="carrinho">
+                    <img src="/IMAGENS/carrinho.png" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="brinco brinco-claro">
+            <img src="/IMAGENS/brinco5.webp" alt="" class="img-claro">
+            <p class="titulo-brinco texto-claro">Colar Simples</p>
+            <div class="compra">
+                <h2 class="texto-claro">R$ 50,00</h2>
+                <button onclick="addCarrinho('Colar Simples', 50)" class="carrinho">
+                    <img src="/IMAGENS/carrinho.png" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="brinco brinco-claro">
+            <img src="/IMAGENS/brinco6.webp" alt="" class="img-claro">
+            <p class="titulo-brinco texto-claro">Colar de gatinho</p>
+            <div class="compra">
+                <h2 class="texto-claro">R$ 50,00</h2>
+                <button onclick="addCarrinho('Colar de gatinho', 50)" class="carrinho">
+                    <img src="/IMAGENS/carrinho.png" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="container">
+        <footer class="rodape" id="contato">
+            <div class="rodape-div rodape-claro">
+
+
+
+                <div class="rodape-div-1">
+
+                    <!-- elemento -->
+                    <span><b>Contatos</b></span>
+                    <p>contato@na.na</p>
+                    <p>+55 63 99200-0000</p>
+
+                </div>
+
+                <div class="rodape-div-2">
+
+                    <!-- elemento -->
+                    <span><b>Links</b></span>
+                    <p><a href="https://www.instagram.com/joias_jgz/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D">Redes Sociais</a></p>
+
+                </div>
+
+                <div class="rodape-div-3">
+
+                    <!-- elemento -->
+                    <span><b>Nós ajude com um feedback</b></span>
+                    <div class="tudo-site">
+                        <div class="reacoes">
+                            <img  class="pe" src="/IMAGENS/triste.png" alt="" id="foto1" onclick="mostrarAvaliacao('ruim')">
+                            <img class="pe" src="/IMAGENS/confuso.png" alt="" id="foto2" onclick="mostrarAvaliacao('indiferente')">
+                            <img  class="pe"   src="/IMAGENS/emoji.png" alt="" id="foto3" onclick="mostrarAvaliacao('boa')">
+                        </div>
+                        <div class="feed">
+                            <input type="text" placeholder="Feedback">
+                            <button id="enviar">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+    <script>
+        var checkbox = document.getElementById("myCheckbox");
+
+        checkbox.addEventListener('change', function () {
+            if (this.checked) {
+                // Checkbox está ativado
+                console.log("Valor quando está On");
+            } else {
+                // Checkbox está desativado
+                console.log("Valor quando está Off");
+            }
+        });
+
+
+
+
+
+        const indicator = document.querySelector('.nav-indicator');
+        const items = document.querySelectorAll('.nav-item');
+
+        function handleIndicator(el) {
+            items.forEach(item => {
+                item.classList.remove('is-active');
+                item.removeAttribute('style');
+            });
+
+            indicator.style.width = `${el.offsetWidth}px`;
+            indicator.style.left = `${el.offsetLeft}px`;
+            indicator.style.backgroundColor = el.getAttribute('active-color');
+
+            el.classList.add('is-active');
+            el.style.color = el.getAttribute('active-color');
+        }
+
+
+        items.forEach((item, index) => {
+            item.addEventListener('click', (e) => { handleIndicator(e.target) });
+            item.classList.contains('is-active') && handleIndicator(item);
+        });
+    </script>
+    <script src="main.js"></script>
+    </div>
+</body>
+
+</html>
